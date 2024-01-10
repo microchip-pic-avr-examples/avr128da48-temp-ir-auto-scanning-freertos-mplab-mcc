@@ -1,0 +1,644 @@
+<config configName="default" projectName="avr128da48-temp-ir-auto-scanning-freertos" configVersion="1.1" device="AVR128DA48" deviceLibraryClass="com.microchip.mcc.melody.Library" coreVersion="5.4.14">
+   <usedPackages class="java.util.ArrayList">
+      <package packageName="@mchp-mcc/avr-8bit" version="4.4.2-dev.7" contentType="MELODY">
+         <modules class="java.util.ArrayList"/>
+      </package>
+      <package packageName="@mchp-mcc/avr8-configuration-bits-v1" version="4.2.9-dev.2" contentType="MELODY">
+         <modules class="java.util.ArrayList"/>
+      </package>
+      <package packageName="@mchp-mcc/avr8-pin-manager" version="4.4.0" contentType="MELODY">
+         <modules class="java.util.ArrayList"/>
+      </package>
+      <package packageName="@mchp-mcc/freertos-library" version="1.0.3-dev.7" contentType="MELODY">
+         <modules class="java.util.ArrayList"/>
+      </package>
+      <package packageName="@mchp-mcc/main-manager" version="3.1.1" contentType="MELODY">
+         <modules class="java.util.ArrayList"/>
+      </package>
+      <package packageName="@mchp-mcc/pin-content-processor" version="3.4.1-rc.1" contentType="MELODY">
+         <modules class="java.util.ArrayList"/>
+      </package>
+      <package packageName="@mchp-mcc/scf-avr8-adc-v1" version="4.2.5" contentType="MELODY">
+         <modules class="java.util.ArrayList"/>
+      </package>
+      <package packageName="@mchp-mcc/scf-avr8-clkctrl-v1" version="5.3.4" contentType="MELODY">
+         <modules class="java.util.ArrayList"/>
+      </package>
+      <package packageName="@mchp-mcc/scf-avr8-interrupt-v1" version="5.0.10" contentType="MELODY">
+         <modules class="java.util.ArrayList"/>
+      </package>
+      <package packageName="@mchp-mcc/scf-avr8-tcb-v1" version="5.0.7" contentType="MELODY">
+         <modules class="java.util.ArrayList"/>
+      </package>
+      <package packageName="@mchp-mcc/scf-avr8-usart-v1" version="10.1.0" contentType="MELODY">
+         <modules class="java.util.ArrayList"/>
+      </package>
+      <package packageName="@mchp-mcc/scf-avr8-vref-v1" version="4.0.2" contentType="MELODY">
+         <modules class="java.util.ArrayList"/>
+      </package>
+      <package packageName="@mchp-mcc/uart-driver" version="1.8.0" contentType="MELODY">
+         <modules class="java.util.ArrayList"/>
+      </package>
+   </usedPackages>
+   <usedClasses class="java.util.TreeMap">
+      <entry>
+         <string>ADC0</string>
+         <string>class com.microchip.mcc.melody.hw.module.HardwareModule</string>
+      </entry>
+      <entry>
+         <string>Application Builder</string>
+         <string>class com.microchip.mcc.melody.module.FrameworkModule</string>
+      </entry>
+      <entry>
+         <string>CLKCTRL</string>
+         <string>class com.microchip.mcc.melody.hw.module.HardwareModule</string>
+      </entry>
+      <entry>
+         <string>CPUINT</string>
+         <string>class com.microchip.mcc.melody.hw.module.HardwareModule</string>
+      </entry>
+      <entry>
+         <string>Configuration Bits</string>
+         <string>class com.microchip.mcc.melody.hw.module.HardwareModule</string>
+      </entry>
+      <entry>
+         <string>MAIN MANAGER</string>
+         <string>class com.microchip.mcc.melody.hw.module.HardwareModule</string>
+      </entry>
+      <entry>
+         <string>Pin Manager</string>
+         <string>class com.microchip.mcc.melody.hw.module.HardwareModule</string>
+      </entry>
+      <entry>
+         <string>TCB0</string>
+         <string>class com.microchip.mcc.melody.hw.module.HardwareModule</string>
+      </entry>
+      <entry>
+         <string>USART1</string>
+         <string>class com.microchip.mcc.melody.hw.module.HardwareModule</string>
+      </entry>
+      <entry>
+         <string>VREF</string>
+         <string>class com.microchip.mcc.melody.hw.module.HardwareModule</string>
+      </entry>
+      <entry>
+         <string>meta</string>
+         <string>class com.microchip.mcc.melody.hw.module.HardwareModule</string>
+      </entry>
+      <entry>
+         <string>module0</string>
+         <string>class com.microchip.mcc.melody.script.module.ScriptModule</string>
+      </entry>
+      <entry>
+         <string>module1</string>
+         <string>class com.microchip.mcc.melody.script.module.ScriptModule</string>
+      </entry>
+      <entry>
+         <string>module14</string>
+         <string>class com.microchip.mcc.melody.script.module.ScriptModule</string>
+      </entry>
+      <entry>
+         <string>module2</string>
+         <string>class com.microchip.mcc.melody.script.module.ScriptModule</string>
+      </entry>
+      <entry>
+         <string>module20</string>
+         <string>class com.microchip.mcc.melody.script.module.ScriptModule</string>
+      </entry>
+      <entry>
+         <string>module24</string>
+         <string>class com.microchip.mcc.melody.script.module.ScriptModule</string>
+      </entry>
+      <entry>
+         <string>module3</string>
+         <string>class com.microchip.mcc.melody.script.module.ScriptModule</string>
+      </entry>
+      <entry>
+         <string>module4</string>
+         <string>class com.microchip.mcc.melody.script.module.ScriptModule</string>
+      </entry>
+      <entry>
+         <string>module5</string>
+         <string>class com.microchip.mcc.melody.script.module.ScriptModule</string>
+      </entry>
+      <entry>
+         <string>module6</string>
+         <string>class com.microchip.mcc.melody.script.module.ScriptModule</string>
+      </entry>
+      <entry>
+         <string>module64</string>
+         <string>class com.microchip.mcc.melody.script.module.ScriptModule</string>
+      </entry>
+      <entry>
+         <string>module77</string>
+         <string>class com.microchip.mcc.melody.script.module.ScriptModule</string>
+      </entry>
+   </usedClasses>
+   <usedLibraries class="java.util.ArrayList">
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.melody.Library" version="2.2.37"/>
+   </usedLibraries>
+   <tokenMap class="java.util.TreeMap">
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Application Builder" name="graph-location-data"/>
+         <value>{&quot;mccDevice&quot;:{&quot;loc&quot;:&quot;0 254.5&quot;,&quot;pos&quot;:&quot;0 254.5&quot;},&quot;systemGroup&quot;:{&quot;loc&quot;:&quot;196 299&quot;,&quot;pos&quot;:&quot;196 299&quot;},&quot;module6&quot;:{&quot;loc&quot;:&quot;393 111.005078125&quot;,&quot;pos&quot;:&quot;393 111.005078125&quot;},&quot;module20&quot;:{&quot;loc&quot;:&quot;600 105&quot;,&quot;pos&quot;:&quot;600 105&quot;},&quot;module64&quot;:{&quot;loc&quot;:&quot;450 450&quot;,&quot;pos&quot;:&quot;450 450&quot;},&quot;module14&quot;:{&quot;loc&quot;:&quot;180 435&quot;,&quot;pos&quot;:&quot;180 435&quot;},&quot;module24&quot;:{&quot;loc&quot;:&quot;393 189&quot;,&quot;pos&quot;:&quot;393 189&quot;},&quot;module77&quot;:{&quot;loc&quot;:&quot;630 315&quot;,&quot;pos&quot;:&quot;630 315&quot;}}</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Application Builder" name="state"/>
+         <value>{&quot;userAddedModules&quot;:[&quot;module5&quot;,&quot;module4&quot;,&quot;module6&quot;,&quot;module18&quot;,&quot;module39&quot;,&quot;module1&quot;,&quot;module0&quot;,&quot;module3&quot;,&quot;module2&quot;,&quot;module32&quot;,&quot;module20&quot;,&quot;module31&quot;,&quot;module64&quot;,&quot;module84&quot;,&quot;module24&quot;,&quot;module13&quot;,&quot;module78&quot;,&quot;module77&quot;,&quot;module81&quot;],&quot;version&quot;:&quot;CURRENT&quot;,&quot;modules&quot;:{&quot;module5&quot;:{&quot;scriptId&quot;:&quot;@mchp-mcc/scf-avr8-interrupt-v1&quot;,&quot;imports&quot;:{&quot;device_meta&quot;:{&quot;interfaceId&quot;:{&quot;name&quot;:&quot;device-meta&quot;,&quot;version&quot;:&quot;1.0.0&quot;},&quot;handle&quot;:{&quot;providerId&quot;:&quot;mccDevice&quot;,&quot;exportId&quot;:&quot;meta&quot;,&quot;label&quot;:&quot;mccDevice : meta&quot;}},&quot;scf_avr8_interrupt_v1&quot;:{&quot;interfaceId&quot;:{&quot;name&quot;:&quot;scf-avr8-interrupt-v1&quot;,&quot;version&quot;:&quot;1.0.0&quot;},&quot;handle&quot;:{&quot;providerId&quot;:&quot;mccDevice&quot;,&quot;exportId&quot;:&quot;CPUINT&quot;,&quot;label&quot;:&quot;CPUINT&quot;}},&quot;initializer_system&quot;:{&quot;interfaceId&quot;:{&quot;name&quot;:&quot;initializer-system&quot;,&quot;version&quot;:&quot;^0&quot;},&quot;handle&quot;:{&quot;providerId&quot;:&quot;module1&quot;,&quot;exportId&quot;:&quot;initializer_system&quot;,&quot;label&quot;:&quot;module1 : initializer_system&quot;}}},&quot;payload&quot;:{&quot;main&quot;:{&quot;interrupt&quot;:{&quot;iSreg&quot;:true}}}},&quot;module4&quot;:{&quot;scriptId&quot;:&quot;@mchp-mcc/scf-avr8-clkctrl-v1&quot;,&quot;imports&quot;:{&quot;pin_standard&quot;:{&quot;interfaceId&quot;:{&quot;name&quot;:&quot;pin-standard&quot;,&quot;version&quot;:&quot;^0&quot;},&quot;handle&quot;:{&quot;providerId&quot;:&quot;module3&quot;,&quot;exportId&quot;:&quot;pin-standard&quot;,&quot;label&quot;:&quot;module3 : pin-standard&quot;}},&quot;scf_avr8_clkctrl_v1&quot;:{&quot;interfaceId&quot;:{&quot;name&quot;:&quot;scf-avr8-clkctrl-v1&quot;,&quot;version&quot;:&quot;^1.0.0&quot;},&quot;handle&quot;:{&quot;providerId&quot;:&quot;mccDevice&quot;,&quot;exportId&quot;:&quot;CLKCTRL&quot;,&quot;label&quot;:&quot;CLKCTRL&quot;}},&quot;device_meta&quot;:{&quot;interfaceId&quot;:{&quot;name&quot;:&quot;device-meta&quot;,&quot;version&quot;:&quot;^1&quot;},&quot;handle&quot;:{&quot;providerId&quot;:&quot;mccDevice&quot;,&quot;exportId&quot;:&quot;meta&quot;,&quot;label&quot;:&quot;mccDevice : meta&quot;}},&quot;config_device&quot;:{&quot;interfaceId&quot;:{&quot;name&quot;:&quot;config-device&quot;,&quot;version&quot;:&quot;^1.1.1&quot;},&quot;handle&quot;:{&quot;providerId&quot;:&quot;module1&quot;,&quot;exportId&quot;:&quot;config_device&quot;,&quot;label&quot;:&quot;module1 : config_device&quot;}},&quot;initializer_system&quot;:{&quot;interfaceId&quot;:{&quot;name&quot;:&quot;initializer-system&quot;,&quot;version&quot;:&quot;^0&quot;},&quot;handle&quot;:{&quot;providerId&quot;:&quot;module1&quot;,&quot;exportId&quot;:&quot;initializer_system&quot;,&quot;label&quot;:&quot;module1 : initializer_system&quot;}},&quot;config_request&quot;:{&quot;interfaceId&quot;:{&quot;name&quot;:&quot;config-request&quot;,&quot;version&quot;:&quot;^2.0.1&quot;},&quot;handle&quot;:{&quot;providerId&quot;:&quot;module1&quot;,&quot;exportId&quot;:&quot;config_request&quot;,&quot;label&quot;:&quot;module1 : config_request&quot;}}},&quot;payload&quot;:{&quot;main&quot;:{&quot;hardware&quot;:{&quot;mainClock&quot;:8000000.0,&quot;frqselOschfctrla&quot;:&quot;24 MHz system clock&quot;}}}},&quot;module6&quot;:{&quot;scriptId&quot;:&quot;@mchp-mcc/scf-avr8-usart-v1&quot;,&quot;imports&quot;:{&quot;osc_clock&quot;:{&quot;interfaceId&quot;:{&quot;name&quot;:&quot;osc-clocks&quot;,&quot;version&quot;:&quot;^0&quot;},&quot;handle&quot;:{&quot;providerId&quot;:&quot;module4&quot;,&quot;exportId&quot;:&quot;osc_clocks&quot;,&quot;label&quot;:&quot;module4 : osc_clocks&quot;}},&quot;pin_standard&quot;:{&quot;interfaceId&quot;:{&quot;name&quot;:&quot;pin-standard&quot;,&quot;version&quot;:&quot;^0&quot;},&quot;handle&quot;:{&quot;providerId&quot;:&quot;module3&quot;,&quot;exportId&quot;:&quot;pin-standard&quot;,&quot;label&quot;:&quot;module3 : pin-standard&quot;}},&quot;interrupt_standard&quot;:{&quot;interfaceId&quot;:{&quot;name&quot;:&quot;interrupt-standard&quot;,&quot;version&quot;:&quot;^1&quot;},&quot;handle&quot;:{&quot;providerId&quot;:&quot;module5&quot;,&quot;exportId&quot;:&quot;interrupt&quot;,&quot;label&quot;:&quot;module5 : interrupt&quot;}},&quot;device_meta&quot;:{&quot;interfaceId&quot;:{&quot;name&quot;:&quot;device-meta&quot;,&quot;version&quot;:&quot;^1&quot;},&quot;handle&quot;:{&quot;providerId&quot;:&quot;mccDevice&quot;,&quot;exportId&quot;:&quot;meta&quot;,&quot;label&quot;:&quot;mccDevice : meta&quot;}},&quot;initializer_system&quot;:{&quot;interfaceId&quot;:{&quot;name&quot;:&quot;initializer-system&quot;,&quot;version&quot;:&quot;^0&quot;},&quot;handle&quot;:{&quot;providerId&quot;:&quot;module1&quot;,&quot;exportId&quot;:&quot;initializer_system&quot;,&quot;label&quot;:&quot;module1 : initializer_system&quot;}},&quot;scf_avr8_usart_v1&quot;:{&quot;interfaceId&quot;:{&quot;name&quot;:&quot;scf-avr8-usart-v1&quot;,&quot;version&quot;:&quot;1.0.0&quot;},&quot;handle&quot;:{&quot;providerId&quot;:&quot;mccDevice&quot;,&quot;exportId&quot;:&quot;USART1&quot;,&quot;label&quot;:&quot;USART1&quot;}}}},&quot;module1&quot;:{&quot;scriptId&quot;:&quot;@mchp-mcc/avr8-configuration-bits-v1&quot;,&quot;imports&quot;:{&quot;device_meta&quot;:{&quot;interfaceId&quot;:{&quot;name&quot;:&quot;device-meta&quot;,&quot;version&quot;:&quot;1.0.0&quot;},&quot;handle&quot;:{&quot;providerId&quot;:&quot;mccDevice&quot;,&quot;exportId&quot;:&quot;meta&quot;,&quot;label&quot;:&quot;mccDevice : meta&quot;}},&quot;initializer_main&quot;:{&quot;interfaceId&quot;:{&quot;name&quot;:&quot;initializer-main&quot;,&quot;version&quot;:&quot;^0.3.0&quot;},&quot;handle&quot;:{&quot;providerId&quot;:&quot;module0&quot;,&quot;exportId&quot;:&quot;initializer_main&quot;,&quot;label&quot;:&quot;module0 : initializer_main&quot;}},&quot;avr8_configuration_bits_v1&quot;:{&quot;interfaceId&quot;:{&quot;name&quot;:&quot;avr8-configuration-bits-v1&quot;,&quot;version&quot;:&quot;1.0.0&quot;},&quot;handle&quot;:{&quot;providerId&quot;:&quot;mccDevice&quot;,&quot;exportId&quot;:&quot;Configuration Bits&quot;,&quot;label&quot;:&quot;Configuration Bits&quot;}}}},&quot;module0&quot;:{&quot;scriptId&quot;:&quot;@mchp-mcc/main-manager&quot;,&quot;imports&quot;:{&quot;main&quot;:{&quot;interfaceId&quot;:{&quot;name&quot;:&quot;main-manager&quot;,&quot;version&quot;:&quot;^1.*&quot;},&quot;handle&quot;:{&quot;providerId&quot;:&quot;mccDevice&quot;,&quot;exportId&quot;:&quot;MAIN MANAGER&quot;,&quot;label&quot;:&quot;MAIN MANAGER&quot;}}}},&quot;module3&quot;:{&quot;scriptId&quot;:&quot;@mchp-mcc/pin-content-processor&quot;,&quot;imports&quot;:{&quot;device-meta&quot;:{&quot;interfaceId&quot;:{&quot;name&quot;:&quot;device-meta&quot;,&quot;version&quot;:&quot;1.0.0&quot;},&quot;handle&quot;:{&quot;providerId&quot;:&quot;mccDevice&quot;,&quot;exportId&quot;:&quot;meta&quot;}},&quot;pin-architecture&quot;:{&quot;interfaceId&quot;:{&quot;name&quot;:&quot;pin-architecture&quot;,&quot;version&quot;:&quot;1.0.0&quot;},&quot;handle&quot;:{&quot;providerId&quot;:&quot;module2&quot;,&quot;exportId&quot;:&quot;pin-architecture&quot;}}},&quot;payload&quot;:{&quot;saved&quot;:{&quot;rows&quot;:{&quot;pcp&quot;:{&quot;GPIO$GPIO$input&quot;:{&quot;pins&quot;:{&quot;PA7&quot;:{&quot;state&quot;:&quot;MUL&quot;},&quot;PD7&quot;:{&quot;state&quot;:&quot;MUL&quot;},&quot;PD6&quot;:{&quot;state&quot;:&quot;MUL&quot;},&quot;PD0&quot;:{&quot;state&quot;:&quot;MUL&quot;},&quot;PD3&quot;:{&quot;state&quot;:&quot;MUL&quot;},&quot;PC6&quot;:{&quot;state&quot;:&quot;MUL&quot;},&quot;PC2&quot;:{&quot;state&quot;:&quot;UL&quot;},&quot;PC3&quot;:{&quot;state&quot;:&quot;UL&quot;}}},&quot;GPIO$GPIO$output&quot;:{&quot;pins&quot;:{&quot;PA7&quot;:{&quot;state&quot;:&quot;L&quot;},&quot;PD7&quot;:{&quot;state&quot;:&quot;L&quot;},&quot;PD6&quot;:{&quot;state&quot;:&quot;L&quot;},&quot;PD0&quot;:{&quot;state&quot;:&quot;L&quot;},&quot;PD3&quot;:{&quot;state&quot;:&quot;L&quot;},&quot;PC6&quot;:{&quot;state&quot;:&quot;L&quot;},&quot;PC2&quot;:{&quot;state&quot;:&quot;UL&quot;},&quot;PC3&quot;:{&quot;state&quot;:&quot;UL&quot;}}}}},&quot;userEditedData&quot;:{&quot;cname&quot;:{&quot;eview&quot;:{&quot;PD7&quot;:&quot;OLED_RST&quot;,&quot;PD6&quot;:&quot;OLED_EN&quot;,&quot;PA7&quot;:&quot;OLED_CS&quot;,&quot;PD0&quot;:&quot;OLED_DC&quot;,&quot;PD3&quot;:&quot;OLED_RW&quot;,&quot;PD4&quot;:&quot;AC1_IN&quot;,&quot;PC6&quot;:&quot;LED&quot;}},&quot;high&quot;:{&quot;eview&quot;:{&quot;PA7&quot;:true,&quot;PC6&quot;:false}},&quot;inv&quot;:{&quot;eview&quot;:{&quot;PC6&quot;:true}}}}}},&quot;module2&quot;:{&quot;scriptId&quot;:&quot;@mchp-mcc/avr8-pin-manager&quot;,&quot;imports&quot;:{&quot;avr8-pin-manager&quot;:{&quot;interfaceId&quot;:{&quot;name&quot;:&quot;avr8-pin-manager&quot;,&quot;version&quot;:&quot;1.0.0&quot;},&quot;handle&quot;:{&quot;providerId&quot;:&quot;mccDevice&quot;,&quot;exportId&quot;:&quot;Pin Manager&quot;}},&quot;initializer_system&quot;:{&quot;interfaceId&quot;:{&quot;name&quot;:&quot;initializer-system&quot;,&quot;version&quot;:&quot;^0.*&quot;},&quot;handle&quot;:{&quot;providerId&quot;:&quot;module1&quot;,&quot;exportId&quot;:&quot;initializer_system&quot;}}},&quot;payload&quot;:{&quot;adapterdata&quot;:{&quot;cname&quot;:{&quot;eview&quot;:{&quot;dataMap&quot;:{&quot;PD7&quot;:{&quot;value&quot;:&quot;OLED_RST&quot;},&quot;PD6&quot;:{&quot;value&quot;:&quot;OLED_EN&quot;},&quot;PA7&quot;:{&quot;value&quot;:&quot;OLED_CS&quot;},&quot;PD0&quot;:{&quot;value&quot;:&quot;OLED_DC&quot;},&quot;PD3&quot;:{&quot;value&quot;:&quot;OLED_RW&quot;},&quot;PD4&quot;:{&quot;value&quot;:&quot;AC1_IN&quot;},&quot;PC6&quot;:{&quot;value&quot;:&quot;LED&quot;}}}},&quot;high&quot;:{&quot;eview&quot;:{&quot;dataMap&quot;:{&quot;PA7&quot;:{&quot;value&quot;:true},&quot;PC6&quot;:{&quot;value&quot;:false}}}},&quot;inv&quot;:{&quot;eview&quot;:{&quot;dataMap&quot;:{&quot;PC6&quot;:{&quot;value&quot;:true}}}},&quot;portmux&quot;:{&quot;data&quot;:{&quot;PORTMUX.TWIROUTEA&quot;:{&quot;TWI0&quot;:&quot;ALT2&quot;}}}}}},&quot;module20&quot;:{&quot;scriptId&quot;:&quot;@mchp-mcc/uart-driver&quot;,&quot;imports&quot;:{&quot;device_meta&quot;:{&quot;interfaceId&quot;:{&quot;name&quot;:&quot;device-meta&quot;,&quot;version&quot;:&quot;^1.0.0&quot;},&quot;handle&quot;:{&quot;providerId&quot;:&quot;mccDevice&quot;,&quot;exportId&quot;:&quot;meta&quot;,&quot;label&quot;:&quot;mccDevice : meta&quot;}},&quot;uart_basic&quot;:{&quot;interfaceId&quot;:{&quot;name&quot;:&quot;uart-basic&quot;,&quot;version&quot;:&quot;^6.0.0&quot;},&quot;handle&quot;:{&quot;providerId&quot;:&quot;module6&quot;,&quot;exportId&quot;:&quot;uart_basic&quot;,&quot;label&quot;:&quot;USART1&quot;}}},&quot;payload&quot;:{&quot;main&quot;:{&quot;software&quot;:{&quot;redirectPrintf&quot;:true}}}},&quot;module64&quot;:{&quot;scriptId&quot;:&quot;@mchp-mcc/scf-avr8-adc-v1&quot;,&quot;imports&quot;:{&quot;pin_standard&quot;:{&quot;interfaceId&quot;:{&quot;name&quot;:&quot;pin-standard&quot;,&quot;version&quot;:&quot;^0&quot;},&quot;handle&quot;:{&quot;providerId&quot;:&quot;module3&quot;,&quot;exportId&quot;:&quot;pin-standard&quot;,&quot;label&quot;:&quot;module3 : pin-standard&quot;}},&quot;adc_reference_voltage&quot;:{&quot;interfaceId&quot;:{&quot;name&quot;:&quot;vref-general-parameters&quot;,&quot;version&quot;:&quot;^0.1.0&quot;},&quot;handle&quot;:{&quot;providerId&quot;:&quot;module14&quot;,&quot;exportId&quot;:&quot;VREF&quot;,&quot;label&quot;:&quot;module14 : VREF&quot;}},&quot;interrupt_standard&quot;:{&quot;interfaceId&quot;:{&quot;name&quot;:&quot;interrupt-standard&quot;,&quot;version&quot;:&quot;^1&quot;},&quot;handle&quot;:{&quot;providerId&quot;:&quot;module5&quot;,&quot;exportId&quot;:&quot;interrupt&quot;,&quot;label&quot;:&quot;module5 : interrupt&quot;}},&quot;device_meta&quot;:{&quot;interfaceId&quot;:{&quot;name&quot;:&quot;device-meta&quot;,&quot;version&quot;:&quot;^1.0.0&quot;},&quot;handle&quot;:{&quot;providerId&quot;:&quot;mccDevice&quot;,&quot;exportId&quot;:&quot;meta&quot;,&quot;label&quot;:&quot;mccDevice : meta&quot;}},&quot;osc_clocks&quot;:{&quot;interfaceId&quot;:{&quot;name&quot;:&quot;osc-clocks&quot;,&quot;version&quot;:&quot;^0.2.0&quot;},&quot;handle&quot;:{&quot;providerId&quot;:&quot;module4&quot;,&quot;exportId&quot;:&quot;osc_clocks&quot;,&quot;label&quot;:&quot;module4 : osc_clocks&quot;}},&quot;scf_avr8_adc_v1&quot;:{&quot;interfaceId&quot;:{&quot;name&quot;:&quot;scf-avr8-adc-v1&quot;,&quot;version&quot;:&quot;1.0.0&quot;},&quot;handle&quot;:{&quot;providerId&quot;:&quot;mccDevice&quot;,&quot;exportId&quot;:&quot;ADC0&quot;,&quot;label&quot;:&quot;ADC0&quot;}},&quot;initializer_system&quot;:{&quot;interfaceId&quot;:{&quot;name&quot;:&quot;initializer-system&quot;,&quot;version&quot;:&quot;^0&quot;},&quot;handle&quot;:{&quot;providerId&quot;:&quot;module1&quot;,&quot;exportId&quot;:&quot;initializer_system&quot;,&quot;label&quot;:&quot;module1 : initializer_system&quot;}}},&quot;payload&quot;:{&quot;main&quot;:{&quot;clockSettgins&quot;:{&quot;prescCtrlc&quot;:&quot;CLK_PER divided by 256&quot;,&quot;sampnumCtrlb&quot;:&quot;16 results accumulated&quot;,&quot;sampleLen&quot;:2.0},&quot;hardware&quot;:{&quot;muxposMuxpos&quot;:&quot;ADC input pin 4&quot;,&quot;muxnegMuxneg&quot;:&quot;ADC input pin 4&quot;,&quot;freerunCtrla&quot;:true},&quot;window&quot;:{&quot;wincmCtrle&quot;:&quot;Outside Window&quot;,&quot;winLoThVal&quot;:0.05,&quot;winHiThVal&quot;:38.0}}}},&quot;module14&quot;:{&quot;scriptId&quot;:&quot;@mchp-mcc/scf-avr8-vref-v1&quot;,&quot;imports&quot;:{&quot;device_meta&quot;:{&quot;interfaceId&quot;:{&quot;name&quot;:&quot;device-meta&quot;,&quot;version&quot;:&quot;^1&quot;},&quot;handle&quot;:{&quot;providerId&quot;:&quot;mccDevice&quot;,&quot;exportId&quot;:&quot;meta&quot;,&quot;label&quot;:&quot;mccDevice : meta&quot;}},&quot;scf_avr8_vref_v1&quot;:{&quot;interfaceId&quot;:{&quot;name&quot;:&quot;scf-avr8-vref-v1&quot;,&quot;version&quot;:&quot;^1.0.0&quot;},&quot;handle&quot;:{&quot;providerId&quot;:&quot;mccDevice&quot;,&quot;exportId&quot;:&quot;VREF&quot;,&quot;label&quot;:&quot;VREF&quot;}},&quot;initializer_system&quot;:{&quot;interfaceId&quot;:{&quot;name&quot;:&quot;initializer-system&quot;,&quot;version&quot;:&quot;^0&quot;},&quot;handle&quot;:{&quot;providerId&quot;:&quot;module1&quot;,&quot;exportId&quot;:&quot;initializer_system&quot;,&quot;label&quot;:&quot;module1 : initializer_system&quot;}}},&quot;payload&quot;:{&quot;main&quot;:{&quot;hardware&quot;:{&quot;alwaysonAcref&quot;:true,&quot;refselDac0ref&quot;:&quot;Internal 1.024V reference&quot;,&quot;refselAcref&quot;:&quot;Internal 2.048V reference&quot;,&quot;alwaysonAdc0ref&quot;:true,&quot;refselAdc0ref&quot;:&quot;Internal 2.500V reference&quot;}}}},&quot;module24&quot;:{&quot;scriptId&quot;:&quot;@mchp-mcc/scf-avr8-tcb-v1&quot;,&quot;imports&quot;:{&quot;pin_standard&quot;:{&quot;interfaceId&quot;:{&quot;name&quot;:&quot;pin-standard&quot;,&quot;version&quot;:&quot;^0&quot;},&quot;handle&quot;:{&quot;providerId&quot;:&quot;module3&quot;,&quot;exportId&quot;:&quot;pin-standard&quot;,&quot;label&quot;:&quot;module3 : pin-standard&quot;}},&quot;scf_avr8_tcb_v1&quot;:{&quot;interfaceId&quot;:{&quot;name&quot;:&quot;scf-avr8-tcb-v1&quot;,&quot;version&quot;:&quot;^1&quot;},&quot;handle&quot;:{&quot;providerId&quot;:&quot;mccDevice&quot;,&quot;exportId&quot;:&quot;TCB0&quot;,&quot;label&quot;:&quot;TCB0&quot;}},&quot;interrupt_standard&quot;:{&quot;interfaceId&quot;:{&quot;name&quot;:&quot;interrupt-standard&quot;,&quot;version&quot;:&quot;^1&quot;},&quot;handle&quot;:{&quot;providerId&quot;:&quot;module5&quot;,&quot;exportId&quot;:&quot;interrupt&quot;,&quot;label&quot;:&quot;module5 : interrupt&quot;}},&quot;device_meta&quot;:{&quot;interfaceId&quot;:{&quot;name&quot;:&quot;device-meta&quot;,&quot;version&quot;:&quot;^1&quot;},&quot;handle&quot;:{&quot;providerId&quot;:&quot;mccDevice&quot;,&quot;exportId&quot;:&quot;meta&quot;,&quot;label&quot;:&quot;mccDevice : meta&quot;}},&quot;osc_clocks&quot;:{&quot;interfaceId&quot;:{&quot;name&quot;:&quot;osc-clocks&quot;,&quot;version&quot;:&quot;^0&quot;},&quot;handle&quot;:{&quot;providerId&quot;:&quot;module4&quot;,&quot;exportId&quot;:&quot;osc_clocks&quot;,&quot;label&quot;:&quot;module4 : osc_clocks&quot;}},&quot;initializer_system&quot;:{&quot;interfaceId&quot;:{&quot;name&quot;:&quot;initializer-system&quot;,&quot;version&quot;:&quot;^0&quot;},&quot;handle&quot;:{&quot;providerId&quot;:&quot;module1&quot;,&quot;exportId&quot;:&quot;initializer_system&quot;,&quot;label&quot;:&quot;module1 : initializer_system&quot;}}}},&quot;module77&quot;:{&quot;scriptId&quot;:&quot;@mchp-mcc/freertos-library&quot;,&quot;imports&quot;:{&quot;pin_standard&quot;:{&quot;interfaceId&quot;:{&quot;name&quot;:&quot;pin-standard&quot;,&quot;version&quot;:&quot;^0.1.*&quot;},&quot;handle&quot;:{&quot;providerId&quot;:&quot;module3&quot;,&quot;exportId&quot;:&quot;pin-standard&quot;,&quot;label&quot;:&quot;module3 : pin-standard&quot;}},&quot;uart_cdc_bridge&quot;:{&quot;interfaceId&quot;:{&quot;name&quot;:&quot;uart-basic-drv-interface&quot;,&quot;version&quot;:&quot;^2.1.0&quot;},&quot;handle&quot;:{&quot;providerId&quot;:&quot;module20&quot;,&quot;exportId&quot;:&quot;uart_basic_drv_interface&quot;,&quot;label&quot;:&quot;USART1&quot;}},&quot;interrupt_standard&quot;:{&quot;interfaceId&quot;:{&quot;name&quot;:&quot;interrupt-standard&quot;,&quot;version&quot;:&quot;^1.0.1&quot;},&quot;handle&quot;:{&quot;providerId&quot;:&quot;module5&quot;,&quot;exportId&quot;:&quot;interrupt&quot;,&quot;label&quot;:&quot;module5 : interrupt&quot;}},&quot;device_meta&quot;:{&quot;interfaceId&quot;:{&quot;name&quot;:&quot;device-meta&quot;,&quot;version&quot;:&quot;^1.*&quot;},&quot;handle&quot;:{&quot;providerId&quot;:&quot;mccDevice&quot;,&quot;exportId&quot;:&quot;meta&quot;,&quot;label&quot;:&quot;mccDevice : meta&quot;}},&quot;tcb_tmr&quot;:{&quot;interfaceId&quot;:{&quot;name&quot;:&quot;tcb-general-parameters&quot;,&quot;version&quot;:&quot;^0.*&quot;},&quot;handle&quot;:{&quot;providerId&quot;:&quot;module24&quot;,&quot;exportId&quot;:&quot;tcb_general_parameters&quot;,&quot;label&quot;:&quot;TCB0&quot;}},&quot;osc_clocks&quot;:{&quot;interfaceId&quot;:{&quot;name&quot;:&quot;osc-clocks&quot;,&quot;version&quot;:&quot;^0.2.0&quot;},&quot;handle&quot;:{&quot;providerId&quot;:&quot;module4&quot;,&quot;exportId&quot;:&quot;osc_clocks&quot;,&quot;label&quot;:&quot;module4 : osc_clocks&quot;}},&quot;initializer_system&quot;:{&quot;interfaceId&quot;:{&quot;name&quot;:&quot;initializer-system&quot;,&quot;version&quot;:&quot;^0.5.3&quot;},&quot;handle&quot;:{&quot;providerId&quot;:&quot;module1&quot;,&quot;exportId&quot;:&quot;initializer_system&quot;,&quot;label&quot;:&quot;module1 : initializer_system&quot;}},&quot;project_properties&quot;:{&quot;interfaceId&quot;:{&quot;name&quot;:&quot;project-properties&quot;,&quot;version&quot;:&quot;^1.*&quot;},&quot;handle&quot;:{&quot;providerId&quot;:&quot;com.microchip.mcc.melody.adapter.ProjectConfigurationAdapter&quot;,&quot;exportId&quot;:&quot;project-properties&quot;,&quot;label&quot;:&quot;com.microchip.mcc.melody.adapter.ProjectConfigurationAdapter : project-properties&quot;}}},&quot;payload&quot;:{&quot;main&quot;:{&quot;generalConfig&quot;:{&quot;cfgTaskStackSize&quot;:64.0,&quot;cfgTaskNameLen&quot;:16.0,&quot;cfgTaskNotification&quot;:true},&quot;memoryConfig&quot;:{&quot;cfgTotalHeapSize&quot;:3074.0},&quot;optionalConfig&quot;:{&quot;deleteTask&quot;:true}}}}},&quot;content&quot;:{&quot;@mchp-mcc/avr-8bit&quot;:&quot;4.4.2-dev.7&quot;,&quot;@mchp-mcc/pin-content-processor&quot;:&quot;3.4.1-rc.1&quot;,&quot;@mchp-mcc/freertos-library&quot;:&quot;1.0.3-dev.7&quot;,&quot;@mchp-mcc/scf-avr8-tcb-v1&quot;:&quot;5.0.7&quot;,&quot;@mchp-mcc/avr8-pin-manager&quot;:&quot;4.4.0&quot;,&quot;@mchp-mcc/scf-avr8-adc-v1&quot;:&quot;4.2.5&quot;,&quot;@mchp-mcc/uart-driver&quot;:&quot;1.8.0&quot;,&quot;@mchp-mcc/scf-avr8-vref-v1&quot;:&quot;4.0.2&quot;,&quot;@mchp-mcc/scf-avr8-interrupt-v1&quot;:&quot;5.0.10&quot;,&quot;@mchp-mcc/main-manager&quot;:&quot;3.1.1&quot;,&quot;@mchp-mcc/scf-avr8-usart-v1&quot;:&quot;10.1.0&quot;,&quot;@mchp-mcc/scf-avr8-clkctrl-v1&quot;:&quot;5.3.4&quot;,&quot;@mchp-mcc/avr8-configuration-bits-v1&quot;:&quot;4.2.9-dev.2&quot;}}</value>
+      </entry>
+   </tokenMap>
+   <generatedFileHashHistoryMap class="java.util.HashMap">
+      <entry>
+         <file>mcc_generated_files\freertos\support_files\common\include\QueueSet.h</file>
+         <hash>cea272e7f1305925c2a158b4af30d0e38d198fcbd21f5dc91d2fe103b3cfd3d0</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\freertos\support_files\common\include\death.h</file>
+         <hash>b5c88982db9a94f595090c7db78f72209b3c9b0f408461ed7c6825139feec10b</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\system\interrupt.h</file>
+         <hash>82e11bfcc3580d592863eb4be64ac91c77e6c2e629fee34636eec2b78bea364e</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\freertos\kernel\tasks.c</file>
+         <hash>f97f4e54a7511e5aea34f583061c628bf718b1024af6ec4cff55cb50365305da</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\freertos\freertos_interface.h</file>
+         <hash>1e734c54e5f471978413983c9d1ec34982db7e13fa04e445e1142f4032995d80</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\system\port.h</file>
+         <hash>da00ddb9d69f1909070150f7216e69cb2f9ebd70cf219b8a2573b77f6d9c2570</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\freertos\freertos_interface.c</file>
+         <hash>ce67208972bc5e15a2b8e532c0a65425475897bdf84cb477f3115bd0b842e313</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\system\utils\interrupt_avr8.h</file>
+         <hash>bfde5feab204bd919693e47acc832088518dad7e81f69c7d10ac6bb88f4436f2</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\freertos\kernel\include\deprecated_definitions.h</file>
+         <hash>1947473678873963f3193497280d907f59a5936f92df6395327f7ca684cb1aa6</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\system\pins.h</file>
+         <hash>d90625da117313a7b7a822395fa8e64aa1e9c2be81ed8103564d90669ac645cd</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\freertos\support_files\common\include\TaskNotifyArray.h</file>
+         <hash>b3b40d088dee8266c20c8f113b5797abd190542309d9ea0f477063f17fb976ae</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\freertos\kernel\include\event_groups.h</file>
+         <hash>5657af602ad7c322965cdd0cf6968b78f13f488229acb45bb2396c5a09d0bfc5</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\freertos\support_files\common\include\TimerDemo.h</file>
+         <hash>6883d2a46b1c2f5e2cf184bbb1bde96a483e88c4a898846cc04edbaf98072b10</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\freertos\support_files\common\dynamic.c</file>
+         <hash>9013a3866b8e1bdda8ee21c7f55eb91edbb3b7d12aa46b84831a09e5d9c3b12a</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\freertos\support_files\common\countsem.c</file>
+         <hash>e6c6441f1078779781077f122aaaec7ac00676dd35536a1383442f4a717c9c28</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\freertos\kernel\portable\portmacro.h</file>
+         <hash>cb27817721834be47d6aae8d903bb828e26e045d8760396db9eb1f5e08a5b1ed</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\system\system.h</file>
+         <hash>0d907e272cd152ad42fd33ee4906a7360beb3e145c40c35daf63478caca5d773</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\examples\blinky_example.c</file>
+         <hash>172db1eb485945ee74a5c05a4956f4bd5a9b09ac503842b29f9fab147b7d00d4</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\freertos\kernel\list.c</file>
+         <hash>21fe8dd565f9610e1ff4a6bf7bebbd16842af13d3d2294f1dc67ad279fb01d22</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\freertos\kernel\portable\port.c</file>
+         <hash>924cf59d7d12ee1f39df784fa0582e9286900edb96227e0ec08ee7eae5979a08</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\freertos\support_files\common\serial.c</file>
+         <hash>537f16ba728ffd0c1b7717ef069623ef792fe703f17f5627fd3e6dc7c1c3e99c</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\freertos\support_files\common\include\QueueSetPolling.h</file>
+         <hash>426cacc5df89fcf19864a46b2df2af359a50ce28608eacd01f08259c08ba6909</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\freertos\kernel\event_groups.c</file>
+         <hash>82542c835466f2abd0eeb2988a0bcecf3d6a14c9dd87ad4a7ca325b15afbce95</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\freertos\kernel\MemMang\heap_4.c</file>
+         <hash>2d2f20b9a79ad94545aa047c7ed2c1e1a51d978bd40f8ddd192330d285d3a9ec</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\freertos\kernel\queue.c</file>
+         <hash>4452e3b0e6446b74c7d010d308072ba0a35c1f92bcf3882a54bf3796a72517aa</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\freertos\support_files\common\include\crflash.h</file>
+         <hash>57b7b9ec0cf881971cfb35af843284916dd947d5505199a2ea492b9c7ef5d5e7</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\freertos\kernel\include\mpu_wrappers.h</file>
+         <hash>0f7a750669b24c41af51482eb76c867a1ed11c14dd4877d07433db3953d9a792</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\freertos\support_files\common\semtest.c</file>
+         <hash>cd2f1bd580275d904dabdbccb34fa8bbc819bc5625affa197c70646ba066db95</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\system\utils\compiler.h</file>
+         <hash>331147d70d1cf9914b76c7e3830ce86b4e34610906f71850a107e0787796b547</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\freertos\kernel\include\StackMacros.h</file>
+         <hash>0c31fd8c0d09753368badc7cf7e62b4c1f84ae1fa857561b6710db8b7a2ae6c5</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\timer\timer_interface.h</file>
+         <hash>0490db7bae81d935f20d78c508896c4a688818c1cd93ee3f5d3968f398a28a65</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\freertos\support_files\common\include\flop.h</file>
+         <hash>72f94efac8962a20ee74dd8b62694b056a4efee21ba90effb6acef8c00f2df7c</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\freertos\support_files\common\QueueSet.c</file>
+         <hash>75277364ff5dabe4af058b0323ba2fc96edc9d8c3032a5662a1b24b962655ee0</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\system\utils\assembler\iar.h</file>
+         <hash>4f9f9d2affcf782428c25ef425254ce59b15d4da78998467899e7c5f0dd81a67</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\freertos\kernel\include\projdefs.h</file>
+         <hash>292c78c91dbf63a6aa028f381b1dd548d549949f4fb9fcfd97f949569e013d76</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\freertos\kernel\include\stream_buffer.h</file>
+         <hash>43bd2a4bf5d6495e04c8409187d8f31dfaee58d8f94d7e3a4fd9830e5d7e68dc</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\uart\uart_drv_interface.h</file>
+         <hash>58be3c17e24cfc415e250bcf811ed8060812ae02c9e61011d8782a65f83f0623</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\uart\src\usart1.c</file>
+         <hash>1417557508cc713db2e0fd752b4cbcd064fab0bb2289f4f318276dfe5353c8ec</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\freertos\support_files\common\include\StaticAllocation.h</file>
+         <hash>3baa48e6a9c4125489e99f218481fa9899f9a41a038a898684b6f88f71bc9b5b</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\freertos\support_files\common\include\integer.h</file>
+         <hash>e865a20ffdcd183906108f9cfefbae1bd8c28740365d15552e1f6ac56231ac02</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\freertos\support_files\common\include\regtest.h</file>
+         <hash>dcd3d960fae2d4fa3e2e45492031826c3f1e6618306e2cf706544e87bbb07548</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\examples\tickless_example.c</file>
+         <hash>3647f27e161df1416724d22cc3dce2f6fd27f863e75b12fc3b7e52d7f3ca7f9e</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\freertos\support_files\common\include\countsem.h</file>
+         <hash>e798b2d524d5009d9d574bcaf8a568868a5e5e53a2e1fb6c6c41aceedba9c7f2</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\freertos\support_files\common\regtest.c</file>
+         <hash>67888afd1f7e362bcd38d09483accb8e074f75330551d1e9be7e31c1e8f2c683</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\freertos\support_files\common\include\recmutex.h</file>
+         <hash>e1e4d366e86890425145524d69e397d00e2a1c876b65f1ded35a281cfac0df6a</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\examples\StaticMemAlloc_blinky_example.c</file>
+         <hash>99647a2d46f229c22a1daf998430300a67fff58326ae96f20e9450160db1c239</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\freertos\support_files\common\include\BlockQ.h</file>
+         <hash>5bbfcdaaa7e82bef01528c3eb077ccb416255c77d80fe8fd3c2f545226b6e6b7</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\freertos\support_files\common\blocktim.c</file>
+         <hash>467786eebbe17aa5cfd8d1e31a93e4cb317b3fdecbc2727389819e6e0d651772</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\system\src\interrupt.c</file>
+         <hash>e4957fc54e9e175aebc8ee87a6cded772cc44a4455be8e83405932122172cb70</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\freertos\kernel\include\stack_macros.h</file>
+         <hash>06b5b66a9b98ad4998c82d353c0108b9db1a846951b8865cbdeeef90c5bbe2fe</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\vref\vref.h</file>
+         <hash>54788c67c59f82ccae2cd0174e3cac089694a1b9851122c38ccca7aa6a6b3764</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\freertos\support_files\common\include\PollQ.h</file>
+         <hash>9bd391264bac0db892640793105e1bbf7ef3aef08ec154aacc4f9b6b901f8da0</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\adc\adc0.h</file>
+         <hash>ac314e0cc0e2b8725686c2844146fbcb00bacb06e3bbdace5d3444bcd21206dd</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\system\config_bits.h</file>
+         <hash>4dced891cb37c49753bf176575bb02c7a8f6a36963f9d26a2006f75d8bc0dcc4</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\freertos\kernel\timers.c</file>
+         <hash>dae8ab1093eed0eebd86eef7f4e777e3d249d98b75528ff3841d41ce1c8f3fa6</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\freertos\kernel\include\message_buffer.h</file>
+         <hash>0f5a90e8303d9aa2a9c897d6b90da50df21776c6bde7bf8c792cacffa3048c8d</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\freertos\kernel\include\semphr.h</file>
+         <hash>6bc571df5182f06bcafe5280fdf762bbba2bf1dbb7867ae3721ce2d7e3e51dae</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\timer\tcb0.h</file>
+         <hash>ee062cec36829947fcd8f80d09b91bec20a493e6181db425bbfe1e8573114aa8</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\freertos\support_files\common\include\AbortDelay.h</file>
+         <hash>8357e29057ae22aeb1362d8efacb5fcb61bc66151c4c8a2178a8e209cf6e2aee</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\freertos\support_files\common\include\StreamBufferDemo.h</file>
+         <hash>2db92da87f1f53b8d3db9f5b8b5860c2a68c4da2832a12d25e46c3222f04e777</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\freertos\support_files\common\include\TaskNotify.h</file>
+         <hash>4f504488443c65e56cbc148e722fa256662b2701a14da48da2e0101e4e424f34</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\examples\trace_example.c</file>
+         <hash>c49026645b975741f97fd2a5140a843fb389e812aab97e3b8a027c9c7145166f</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\freertos\support_files\common\include\print.h</file>
+         <hash>8613dcb5db6f72815dc127b09a92c8a5acc18a4d697a42bda0f998f6f642ae33</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\freertos\kernel\include\atomic.h</file>
+         <hash>c61a771207af5ce988982cc9d25995d8e5cf20db37bddf4c6e8a1db4f2781585</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\timer\src\tcb0.c</file>
+         <hash>2ed016eea4070116942f3e3b724e327c864070c5cb34a0d5a5fc3a277c800381</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\freertos\support_files\common\include\flash_timer.h</file>
+         <hash>519a6836c6c86e7a20563ade9ed1f9ed1cd8e7da57d49d95b4f015acde5d56e6</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\uart\uart_types.h</file>
+         <hash>b12596b514a3ada9b017357d3c42bf1f71d00d3e62d7651332aadf3dd65e55a2</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\system\src\clock.c</file>
+         <hash>b1ec115a9464f72e1ddcb034043560d133bf273188a15458242771bf7b739085</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\system\clock.h</file>
+         <hash>b7fd1a5c3ac37c11dc238a012adc03854ab2919fb85f23c61dfc8df067e999ae</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\freertos\support_files\common\include\dynamic.h</file>
+         <hash>4b147353bb68309cb4df4d14e9532811cbe4202776fb8e0555863d1a9f456a28</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\freertos\kernel\include\task.h</file>
+         <hash>f6809520c1b362626326e74b51fde977e6763589a3ce85857896f2e43e0970e8</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\freertos\support_files\common\include\MessageBufferDemo.h</file>
+         <hash>950d38982841db90d5714ee7f22946f3b052488656bbc6a7440fb89a4bc3d5e5</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\freertos\support_files\common\include\MessageBufferAMP.h</file>
+         <hash>5e6c10b1b79749c35c7f181b066b77d4756f11f4cccaabbf147ed0b159b6f0f4</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\freertos\support_files\common\include\QPeek.h</file>
+         <hash>696c03f43c95daea0ecc08b00b9c47d2905998365a79aecf2328e7e2dfdb3506</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\freertos\support_files\common\include\IntSemTest.h</file>
+         <hash>fdddeae5b72ef1a419a658f356ceb6e59fc711e879daecdedbe4ca5abfd28da1</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\freertos\support_files\common\include\crhook.h</file>
+         <hash>59e7d8670f4714ac21276de49326d2c0f68e20562dc082f1d63c2f06a6e138fe</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\freertos\support_files\common\include\mevents.h</file>
+         <hash>e2c4300f6949de902a161826176cb5bdba0568b08753e785f4d0d0348e6c3f37</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\system\utils\assembler\gas.h</file>
+         <hash>0b060c897bb4aaa534adb50aaae279e6e33d91c2ba90846fb5ed615d25cba275</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\freertos\support_files\common\include\blocktim.h</file>
+         <hash>5b199f0f7051d5d8b50f0a963744983c184eae0b7d3321f4f7a6907ff91550a4</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\freertos\support_files\common\PollQ.c</file>
+         <hash>67aecc7371e25420e89ab9f8f51fadb145b983accdffda5c1b330f11e532386e</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\freertos\kernel\include\portable.h</file>
+         <hash>c95eb0d549ff1c20edebfec41d73584b5a20d21df20a724084200954b9e8d252</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\FreeRTOSConfig.h</file>
+         <hash>0998f3a016e61d6e9a69dbb4f19867e1ecdad1ffaaa6b82802cc788320aebee5</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\freertos\support_files\common\include\EventGroupsDemo.h</file>
+         <hash>323fa9df0d027c45020db0d378cb00f4d21a28d2f4b470414f64d1ed9dd36cf8</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\freertos\support_files\common\include\comtest_strings.h</file>
+         <hash>400de9819af41f0cd06a02c512ee86774ee5fec48a92c3aa33e2b9557c49ea7a</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\freertos\support_files\common\include\semtest.h</file>
+         <hash>2040787d21d7c87e01b790dbbeba83c7e414d1f1383629ab67375b6e7a6baa5f</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\freertos\support_files\common\include\comtest2.h</file>
+         <hash>8a9a88f3ccc51367cc69af402b6cf7f78b61ac7708e54ba764fc90961100969f</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\freertos\support_files\common\recmutex.c</file>
+         <hash>c249d57b9064f5dcc1ffd013a4f2c8e9d7c1b63819a75e5a14a9279068ae866b</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\vref\src\vref.c</file>
+         <hash>65f306f44927d2a561574761ac3599f8b548183e7d13325aab4699689b0997d8</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\freertos\support_files\common\QPeek.c</file>
+         <hash>d1867a4f0cea3f2ffd0281499e553c73c2f5ffce410b2f6517262fa8348fab72</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\freertos\kernel\include\list.h</file>
+         <hash>f288a68b8559a1913dd663136711f7adcaf8b3430627d7102978be4d808a02eb</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\examples\full_example.c</file>
+         <hash>a9d8f610d67348e3b3171a9b82475d81665b8f8081bef685f9014820e4597dc0</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\system\src\config_bits.c</file>
+         <hash>2f64f6e7a466506d37d97eed5514cf072ff8197f884994014a25e95d28ec9045</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\system\src\protected_io.S</file>
+         <hash>e71791807bb5f87f45c5af393675eaec6337c8d6a3fa96c03eaafaf125c177a6</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\freertos\kernel\include\timers.h</file>
+         <hash>92337ec802dfe55fc11db2f4817d3b66e79c80897ed40c0040ba5967cf7db013</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\freertos\support_files\common\include\flash.h</file>
+         <hash>38cb92a416cd8b31e2cf32d37647e3f83ba89f27f3148a721bbe86c3aa866366</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\system\src\system.c</file>
+         <hash>7c4845dd0d29c9d48a4c8c6dd95493924c4affe28c882e4278cd50d122577dd8</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\freertos\support_files\common\include\partest.h</file>
+         <hash>704f805f5b0d6f49bb615cab0f122294119badb48c265f155569095c6eab2a8a</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\freertos\support_files\common\include\StreamBufferInterrupt.h</file>
+         <hash>7f9764f8b7dbd48ea1f93e1745c6b8902454c0025c103d5047aae5a8309c6ee9</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\freertos\support_files\common\death.c</file>
+         <hash>28938cb055463af821e4571ad85d49f093650297a719c2ae9a9d0265429ded2f</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\freertos\support_files\common\integer.c</file>
+         <hash>21fe563e971cda3e0875a3af817c8dbae3c138aeb187b2f21d5c0bac3be677e8</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\system\utils\utils_assert.h</file>
+         <hash>e905a84f7ae56175568aa2d4d5e2af0757dbe7e01637447b78825965fb926ead</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\freertos\kernel\include\FreeRTOS.h</file>
+         <hash>c8d9b7a52d092f37b4c3b821806bd6e8a30dbcc600960f9aed2b2f10f965c09f</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\freertos\kernel\croutine.c</file>
+         <hash>4566d5abfceea128a553ecf2bbb22b9d7c9c8a1d3c1f02f9091182b5290d02fc</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\system\src\pins.c</file>
+         <hash>452ae16bf648bd5931dc109d76ae0b2f5083802c1114526ea623fb322b90ea27</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\system\utils\atomic.h</file>
+         <hash>33bdbc1839145b75ae7bc9558dbfff4e387756ab13b717bed4ad03c922e7b896</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\examples\cli_example.c</file>
+         <hash>a1c7f97d800120aaa4737543d2d846d76bdc91a29456fb4493e70993ce189898</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\system\ccp.h</file>
+         <hash>d16be0127047d07a576b1796e5ea9ce73c911cceb4e355882c1359d7d53a4fcb</hash>
+      </entry>
+      <entry>
+         <file>main.c</file>
+         <hash>aac0d1f4f09a0fadf6f546ac9f81c703c14e199122dabc2684e6ab08d993ea3a</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\freertos\kernel\include\croutine.h</file>
+         <hash>b6da8ad0cb09303c87eb634679b97f56001c14f45acd1378103504699a95cad4</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\freertos\support_files\common\include\serial.h</file>
+         <hash>18a0adb1e8c8afd936c90c3ae76100e167a738c0717fe4725c5a0067e0209382</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\freertos\support_files\common\include\QueueOverwrite.h</file>
+         <hash>a4cff147415edce90e57e77e56c31773c2bd6c7ffbc9fb5f7bc0b77764e138e4</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\uart\usart1.h</file>
+         <hash>9cecf9cac94d20bcf7b6b80e56e71596ee70a9b42103a0961a60904d2add0d87</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\adc\src\adc0.c</file>
+         <hash>ee9f486b42c75e3a174ceeb4866cf0f06714076b288be0e8602d2890eca6ff71</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\freertos\support_files\common\include\fileIO.h</file>
+         <hash>17ddf3f5a9a0be738b4abb68464b730fd5741dfe7146b98edef8aedd836148bf</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\freertos\support_files\common\TaskNotify.c</file>
+         <hash>1ef41e67d40558bd00599af09bb6d5efbe3ed7be9ac5219471a5470723caa9f6</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\system\utils\utils.h</file>
+         <hash>4bfeefbd27470d9c9c23de24296ca4e55a0118cc88498b84a1ac3e953b3a3555</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\system\utils\assembler.h</file>
+         <hash>a5c1f4a6ab699ba29a095921f768b46814ee8f7cc1a7ebd0445bdcef26c4797a</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\freertos\support_files\common\include\IntQueue.h</file>
+         <hash>a8cb48d1aaa9c7bd53b2259efd890c347ba92168e60e912b2ef870a2a028d7d8</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\freertos\support_files\common\include\comtest.h</file>
+         <hash>bc4159dbc656ed28d82ee832b2c192ec50698232f8d1bd6bdee6c259dbbbae03</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\freertos\support_files\common\include\GenQTest.h</file>
+         <hash>38dfda12b856a93ddefd4dc68babb100641f94d52c498e54fd97301f7ccc3beb</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\system\protected_io.h</file>
+         <hash>aaa6f1e8dda8eb88d42f17b5b0d225b09dab8022ec5f8ea1eb357a6118e3c302</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\freertos\support_files\common\BlockQ.c</file>
+         <hash>d5d8c91e861f9a0162c1b2abae372de0870e79cab8bad044f3ef93a428efefe1</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\freertos\kernel\include\queue.h</file>
+         <hash>7222b052a47c955cfbabbeac90dbd6f2dffbae9a9f819f2ac7b659770895c0f8</hash>
+      </entry>
+   </generatedFileHashHistoryMap>
+</config>

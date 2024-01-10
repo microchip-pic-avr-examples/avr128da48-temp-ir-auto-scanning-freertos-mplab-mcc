@@ -1,6 +1,8 @@
-# Untracked files in MPLABX projects
-/**/build/*
-/**/nbproject/*
-!/**/nbproject/*.xml
-/**/dist/*
-/**/.generated_files/*
+avr128da48-temp-ir-auto-scanning-freertos.X/dist/default/production/avr128da48-temp-ir-auto-scanning-freertos.X.production.elf
+avr128da48-temp-ir-auto-scanning-freertos.X/dist/default/production/avr128da48-temp-ir-auto-scanning-freertos.X.production.hex
+avr128da48-temp-ir-auto-scanning-freertos.X/dist/default/production/avr128da48-temp-ir-auto-scanning-freertos.X.production.map
+avr128da48-temp-ir-auto-scanning-freertos.X/dist/default/production/memoryfile.xml
+avr128da48-temp-ir-auto-scanning-freertos.X/build/
+*.mk
+avr128da48-temp-ir-auto-scanning-freertos.X/nbproject/private/
+avr128da48-temp-ir-auto-scanning-freertos.X/.generated_files/
