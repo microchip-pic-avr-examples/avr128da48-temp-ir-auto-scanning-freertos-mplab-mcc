@@ -33,7 +33,7 @@ More details and code examples on the AVR128DA48 can be found at the following l
 
 ## Setup
 
-The AVR128DA48 Curiosity Nano Development Board[ (DM164151)](https://www.microchip.com/en-us/development-tool/dm164151?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_AVR-DA&utm_content=freertos-temp-access-point&utm_bu=MCU08) is used as development platform, inserted into the Curiosity Nano Base for Click Boards [(AC164162)](https://www.microchip.com/en-us/development-tool/AC164162?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_AVR-DA&utm_content=freertos-temp-access-point&utm_bu=MCU08).
+The AVR128DA48 Curiosity Nano Development Board[ (DM164151)](https://www.microchip.com/en-us/development-tool/dm164151?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_AVR-DA&utm_content=freertos-temp-access-point&utm_bu=MCU08) is used as a development platform, inserted into the Curiosity Nano Base for Click Boards [(AC164162)](https://www.microchip.com/en-us/development-tool/AC164162?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_AVR-DA&utm_content=freertos-temp-access-point&utm_bu=MCU08).
 
 <a name="ConfigA" id="ConfigA"> </a>
   - **The Hardware Configuration** uses an OLED C click, PIR click, and IrThermo click, inserted into mikroBUS slots of the Curiosity Nano Adapter along side the AVR128DA48 Curiosity Nano.
