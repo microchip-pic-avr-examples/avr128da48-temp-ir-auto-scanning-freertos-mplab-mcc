@@ -23,7 +23,7 @@
             "semverRange": "^2.2.159"
         },
         "configurator": {
-            "name": "MCC`",
+            "name": "MCC",
             "semverRange": ">=5.2.2"
         },
         "device": {
