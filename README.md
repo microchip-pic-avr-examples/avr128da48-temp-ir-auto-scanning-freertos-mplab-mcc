@@ -33,10 +33,10 @@ More details and code examples on the AVR128DA48 can be found at the following l
 
 ## Setup
 
-The AVR128DA48 Curiosity Nano Development Board[ (DM164151)](https://www.microchip.com/en-us/development-tool/dm164151?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_AVR-DA&utm_content=freertos-temp-access-point&utm_bu=MCU08) is used as a development platform, inserted into the Curiosity Nano Base for Click Boards [(AC164162)](https://www.microchip.com/en-us/development-tool/AC164162?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_MMTCha_AVR-DA&utm_content=freertos-temp-access-point&utm_bu=MCU08).
+The AVR128DA48 Curiosity Nano Development board is used as a development platform, inserted into the Curiosity Nano Base for Click boards.
 
 <a name="ConfigA" id="ConfigA"> </a>
-  - **The Hardware Configuration** uses an OLED C click, PIR click, and IrThermo click, inserted into mikroBUS slots of the Curiosity Nano Adapter along side the AVR128DA48 Curiosity Nano.
+  - The hardware configuration uses an OLED C click, PIR click, and IrThermo click, inserted into mikroBUS™ slots of the Curiosity Nano adapter alongside the AVR128DA48 Curiosity Nano.
 <br><img src="images/HardwareA.JPG" width="560">
 
 <br>Below is the pin configuration for the project:
@@ -61,32 +61,32 @@ The AVR128DA48 Curiosity Nano Development Board[ (DM164151)](https://www.microch
 
 <a name="Description" id="Description"> </a>
 ### Project Description
-This project describes the usage of the AVR DA microcontroller as the heart of the Temperature Auto-Scanning Door Access.
-The purpose is to detect a person using a PIR sensor and then measure its temperature using an IR contactless thermo-scanner.  
-The ADC peripheral is used to read the PIR Click board, and trigger from sleep the CPU, only if the ADC value is outside the Window Comparator Threshold. 
+This project describes the usage of the AVR DA Microcontroller as the heart of the Temperature Auto-Scanning Door Access.
+The purpose is to detect a person using a passive infrared sensor (PIR) sensor and then measure its temperature using an IR contactless thermo-scanner.  
+The Analog-to-Digital Converter (ADC) peripheral is used to read the PIR Click board, and trigger from Sleep the CPU, only if the ADC value is outside the Window Comparator threshold. 
 Then, the OLED C Click board is used to display the information to the user. The project was ported onto a real time operating system, FreeRTOS. 
-The flow diagram of different FreeRTOS Tasks are presented here:
+The flow diagram of different FreeRTOS tasks are presented here:
 <br><img src="images/freertos-task-diagram.png" width="660">
 ### FreeRTOS Porting
 In order to port to FreeRTOS we have to slice the source code into different tasks/threads, each with different priority.
-Thus we have:
-- The OLED Setup task, ran only once at start-up in order to configure the OLED to the correct settings using SPI.
-- The OLED Display Task, which its only purpose is to wait for some information to appear inside the OLED Print Queue and display it on the OLED Screen.
+Thus, we have:
+- The OLED Setup task, ran only once at start-up in order to configure the OLED to the correct settings using Serial Peripheral Interface (SPI)
+- The OLED Display Task, whose only purpose is to to wait for some information to appear inside the OLED Print Queue and display it on the OLED screen
   <br><img src="images/oled-disp-flow.png" width="550">
-- The UART Print Task, which the same as before, it waits for the UART Print Queue to have information inside it and will print that information on the serial terminal.
-- The Motion Check Task, used to routinely check if the ADC Window Comparator Interrupt has gone off, in which case it will start up the Temperature Measure task.
+- The UART Print task, which is the same as the one above, waits for the UART Print Queue to have information to print on the serial terminal
+- The Motion Check task is used to routinely check if the ADC Window Comparator Interrupt had gone off, in which case it will start up the Temperature Measure task
    <br><img src="images/motion-check.png" width="550">
-- The Temperature Measure Task, the primary function of this project, will firstly compare the temperature difference (Tobject-Tambient) with a predefined value in order to be sure that a human is in front of the sensor and if it is above it , it will start to actually measure the user temperature. After that, the door "actuator" (the PC6 LED) will be opened or closed, based on the read temperature value. In parallel, information is being sent to both queues.
+- The Temperature Measure task compares the temperature difference between an object and a predefined value (referred to Tobject minus Tambient) to make sure that a person is in front of the sensor and measures that temperature. The door "actuator" (the PC6 LED) will be opened or closed, based on the read value of the user temperature. In paralled, information is sent to both queues
   <br><img src="images/temp-measure.png" width="550">
 
-#### The FreeRTOS code is inside mcc_generated_files/freertos/freertos_interface.c
+Note: The FreeRTOS code is inside mcc_generated_files/freertos/freertos_interface.c
 
 ### Demo Operation
 1. Connect the board to a PC/Laptop/Mac with a micro-USB cable, like in the diagram below:
 <br><img src="images/hardware-connection.png" width="560">
 2. Open MPLAB X and load the project avr128da48-temp-ir-auto-scanning-freertos.X
 3. Clean and Build Project, then Make and Program the AVR128DA48 Curiosity Nano.
-4. After programming, the OLED screen should light up with the message: "Motion detected" when motion is detected.
+4. After programming, the OLED screen will light up with the message: "Motion detected" when motion is detected.
 5. Follow the steps provided by the display to measure the contactless temperature, as in the animation below:
     <br><img src="images/Demo.GIF" alt="Demo" width="560"/>
 6. Watch the full demo of this application in the video link, below:
@@ -96,5 +96,5 @@ Thus we have:
 
 ## Summary
 This example provides a method for using the The AVR® DA family of microcontrollers for a Real Time Operating System project, such as a temperature access point with auto-scanning and low power functions built on the FreeRTOS Library provided by MCC.
-AVR® DA will detect moving persons nearby and invite them to measure their contactless temperature, showing the result on the OLED display.
+AVR® DA will detect moving persons nearby and invite them to measure their temperature contactless, showing the result on the OLED display.
 The hardware setup can be powered by a single lithium battery and because of the low power consumption, it will last for many hours.
