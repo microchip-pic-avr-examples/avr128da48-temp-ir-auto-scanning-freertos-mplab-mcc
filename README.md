@@ -76,7 +76,7 @@ Thus, we have:
 - The UART Print task, which is the same as the one above, waits for the UART Print Queue to have information to print on the serial terminal
 - The Motion Check task is used to routinely check if the ADC Window Comparator Interrupt had gone off, in which case it will start up the Temperature Measure task
    <br><img src="images/motion-check.png" width="550">
-- The Temperature Measure task compares the temperature difference between an object and a predefined value (referred to Tobject minus Tambient) to make sure that a person is in front of the sensor and measures that temperature. The door "actuator" (the PC6 LED) will be opened or closed, based on the read value of the user temperature. In paralled, information is sent to both queues
+- The Temperature Measure task compares the temperature difference between an object and a predefined value (referred to Tobject minus Tambient) to make sure that a person is in front of the sensor and measures that temperature. The door "actuator" (the PC6 LED) will be opened or closed, based on the read value of the user temperature. In parallel, information is sent to both queues
   <br><img src="images/temp-measure.png" width="550">
 
 Note: The FreeRTOS code is inside mcc_generated_files/freertos/freertos_interface.c
@@ -95,6 +95,6 @@ Note: The FreeRTOS code is inside mcc_generated_files/freertos/freertos_interfac
 
 
 ## Summary
-This example provides a method for using the The AVR® DA family of microcontrollers for a Real Time Operating System project, such as a temperature access point with auto-scanning and low power functions built on the FreeRTOS Library provided by MCC.
+This example provides a method for using the the AVR DA family of microcontrollers for a Real Time Operating System project, such as a temperature access point with auto-scanning and low power functions built on the FreeRTOS Library provided by MCC.
 AVR® DA will detect moving persons nearby and invite them to measure their temperature contactless, showing the result on the OLED display.
 The hardware setup can be powered by a single lithium battery and because of the low power consumption, it will last for many hours.
