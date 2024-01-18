@@ -2,7 +2,7 @@
 <div id="readme" class="Box-body readme blob js-code-block-container">
  <article class="markdown-body entry-content p-3 p-md-6" itemprop="This needs to locked down and 'never' changed"><p><a href="https://www.microchip.com" rel="nofollow"><img src="images/microchip.png" alt="MCHP" width="300";"></a></p>
 
-# Temperature Access Point using AVR® DA microcontroller and FreeRTOS
+# Temperature Access Point Using AVR® DA Microcontroller and FreeRTOS
 
 This repository contains a FreeRTOS implementation of a temperature access point with motion detection. It has contactless temperature ir auto-scanning using the AVR® DA microcontroller from Microchip.
 
